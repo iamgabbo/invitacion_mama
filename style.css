@@ -255,3 +255,37 @@ body {
   border-radius: 5px;
   transition: background 0.3s;
 }
+/* Indicador de scroll */
+.scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.scroll-down span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-bottom: 2px solid #bfa46f;
+  border-right: 2px solid #bfa46f;
+  transform: rotate(45deg);
+  animation: bounce 2s infinite;
+}
+
+.scroll-down span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.scroll-down span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0) rotate(45deg); opacity: 0.3; }
+  50%  { transform: translateY(10px) rotate(45deg); opacity: 1; }
+  100% { transform: translateY(0) rotate(45deg); opacity: 0.3; }
+}
