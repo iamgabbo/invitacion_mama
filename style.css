@@ -1,0 +1,257 @@
+/* General */
+body {
+  margin: 0;
+  font-family: 'Dancing Script', cursive;;
+  background: #f8f5f0;
+  color: #2c2c2c;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Intro */
+.intro-screen {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #e9e3d9;
+  overflow: hidden;
+  position: relative;
+}
+
+/* El 60 gigante */
+.big-60 {
+  position: absolute;
+  font-size: 10rem;
+  font-weight: bold;
+  color: rgba(191, 164, 111, 0.15); /* dorado claro translúcido */
+  animation: fadeZoom 4s ease forwards;
+  animation-iteration-count: 3;
+}
+
+@keyframes fadeZoom {
+  0% { opacity: 0; transform: scale(0.5); }
+  40% { opacity: 1; transform: scale(1.2); }
+  80% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; }
+}
+
+/* Nombre en cursiva */
+.scrolling-name {
+  font-family: 'Imperial Script', cursive;
+  font-size: 6rem;
+  animation: scrollText 10s linear infinite;
+  white-space: nowrap;
+
+}
+@keyframes scrollText {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+
+/* Música */
+.music-control {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Burbujas */
+.floating-images {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+.bubble {
+  width: 90px;
+  border-radius: 50%;
+  position: absolute;
+  animation: float 10s infinite ease-in-out;
+  opacity: 0.4;
+}
+.bubble1 { left: 15%; animation-delay: 0s; }
+.bubble2 { left: 55%; animation-delay: 3s; }
+.bubble3 { left: 75%; animation-delay: 6s; }
+.bubble4 { left: 35%; animation-delay: 2s; }
+.bubble5 { left: 25%; animation-delay: 4s; }
+.bubble6 { left: 45%; animation-delay: 5s; }
+@keyframes float {
+  0% { transform: translateY(100vh); }
+  50% { transform: translateY(40vh); }
+  100% { transform: translateY(-20vh); }
+}
+
+/* Secciones */
+.section {
+  padding: 2rem 1rem;
+}
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.phrase {
+  font-size: 2rem;
+  font-style: italic;
+  color: #5a4b38;
+  line-height: 1.5;
+}
+
+/* Cuenta regresiva */
+.countdown {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #bfa46f;
+  margin-top: 1rem;
+}
+
+/* Links */
+.map-link, .form-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  background: #bfa46f;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+.map-link:hover, .form-btn:hover {
+  background: #8e794f;
+}
+
+/* Footer */
+.footer {
+  background: #e9e3d9;
+  padding: 2rem;
+}
+.footer-message {
+  font-size: 1rem;
+  margin-bottom: .5rem;
+}
+.footer-signature {
+  font-style: italic;
+  margin-top: .5rem;
+}
+/* Recuadro de la fecha */
+/* .event-date-box {
+  display: inline-block;
+  background: #fff;
+  border: 2px solid #bfa46f;
+  padding: 1rem 2rem;
+  margin: 1rem auto;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #5a4b38;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: 'Georgia', serif;
+} */
+/* Estilo de la nueva cuenta regresiva */
+.countdown-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.time-box {
+  background: #fff;
+  border: 2px solid #bfa46f;
+  border-radius: 10px;
+  padding: 1rem;
+  min-width: 70px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.time-box .number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #bfa46f;
+}
+
+.time-box .label {
+  font-size: 0.9rem;
+  color: #5a4b38;
+  margin-top: 0.3rem;
+  font-style: italic;
+}
+.section-title, .footer-signature {
+  font-family: 'Imperial Script', cursive;
+}
+.time-box .number {
+  font-family: 'Imperial Script', cursive;
+  font-size: 2.5rem;
+  font-weight: normal;
+  color: #bfa46f;
+}
+
+.time-box .label {
+  font-family: 'Dancing Script', cursive; /* más sobria para contraste */
+  font-size: 0.9rem;
+  color: #5a4b38;
+}
+
+.event-date-box {
+  display: inline-block;
+  background: #fff;
+  border: 2px solid #bfa46f;
+  padding: 1rem 2rem;
+  margin: 1rem auto;
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #bfa46f;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: 'Imperial Script', cursive;
+}
+.dat {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.2rem;
+  color: #5a4b38;
+  margin: 0.2rem 0;
+}
+
+.hor {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.2rem;
+  color: #5a4b38;
+  margin: 0.2rem 0;
+}
+
+.loc {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.2rem;
+  color: #5a4b38;
+  margin: 0.2rem 0;
+}
+.phrase {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.5rem;
+  color: #5a4b38;
+  margin: 1rem 0;
+}
+
+.calendar-btn {
+  font-family: 'Dancing Script', cursive;
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  background: #bfa46f;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
